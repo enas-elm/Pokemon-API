@@ -1,0 +1,99 @@
+@import 'abstract/variables';
+@import 'abstract/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Press Start 2P', cursive;
+  text-align: justify;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.all{
+    gap: 80px;
+    row-gap: 20px;
+    column-gap: 20px;
+    background-color: $bg-color;
+    padding: 5%;
+}
+.darkall{
+    background-color: rgb(44, 44, 44);
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: $blue-green;
+}
+
+button{
+    margin-top: 50px;
+    padding: 2px;
+    background-color: $blue-green;
+    color: white;
+}
+
+h2{
+    color:  $pink-text-color;
+    width: 100%;
+    text-align: center;
+}
+
+.gen{
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+
+
+
+/* In each div for each pokemon*/
+.pokedivId{
+    padding: 15px;
+    text-align: center;
+    border: solid cadetblue 5px;
+    width: 150px;
+    background-color: rgb(252, 204, 204);
+    p{
+        text-align: center;
+    }
+}
+
+.darkpokediv{
+    background-color: rgb(148, 144, 144);
+}
+
+#namePid{
+    color: $pink-text-color;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bothTypeSection{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 8px;
+}
+
+.type1 , .type2{
+    @include type;
+    background-color:$bg-type;
+}
+
+#water{
+    @include type;
+    background-color:$water;
+    color: white;
+    width: min-content;
+    display: flex;
+    margin: 0 auto;
+}
